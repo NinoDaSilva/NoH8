@@ -8,16 +8,18 @@ export default {
     colors: {
       "blanc": "#fafafa",
       "noir": "#e1e1e1",
+      "bleuNuit": "#181831",
+      "bleu": "1da1f2"
     },
     fontSize: {
-      "base": "1.375rem",//22px
-      "lg": "1.625rem",//26px
-      "xl": "4.375rem",//70px
-      "2xl": "8.1875rem"//131px
+      "xs": "0.938rem", //15px
+      "base": "1rem",//16px
+      "lg": "1.25rem",//20px
+      "xl": "2.5rem",//40px
+      "2xl": "3.125rem"//50px
     },
     fontFamily: {
-      "main": ['Michroma', 'sans-serif'],
-      "secondary": ['Didact Gothic', 'sans-serif'],
+      "uncut-sans": "Uncut Sans"
     },
     extend: {},
   },
