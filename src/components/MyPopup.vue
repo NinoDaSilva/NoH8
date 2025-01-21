@@ -16,7 +16,8 @@ const messages = [
     "Personne ne te respectera jamais.",
     "Pourquoi tu continues ? Tous le monde s'en fou",
     "Qui t'as demandé(e) ?!",
-    "Tu sais rien faire !"
+    "Tu sais rien faire !",
+    "T'es qu'une grosse m****",
 ];
 
 // Niveau actuel pour `z-index`
@@ -30,7 +31,7 @@ function getRandomInterval(min: number, max: number): number {
     return Math.random() * (max - min) + min;
 }
 
-const randomDelay = getRandomInterval(600, 1000);
+const randomDelay = getRandomInterval(700, 1000);
 
 // Fonction pour afficher un nouveau message
 function addRandomMessage() {
