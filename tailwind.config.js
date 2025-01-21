@@ -9,7 +9,7 @@ export default {
       "blanc": "#fafafa",
       "noir": "#e1e1e1",
       "bleuNuit": "#181831",
-      "bleu": "1da1f2"
+      "bleu": "#1da1f2"
     },
     fontSize: {
       "xs": "0.938rem", //15px
