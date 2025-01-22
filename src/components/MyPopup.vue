@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue';
 
 // Liste des messages offensants
 const messages = [
-    "T'es vraiment nul(le), pourquoi tu postes ça ?",
+    "T'es vraiment nul, pourquoi tu postes ça ?",
     "Personne ne t'aime, arrête de te ridiculiser.",
     "C'est la chose la plus débile que j'ai vue.",
     "Sérieusement ? Tu penses que ça intéresse quelqu'un ?",
@@ -22,27 +22,24 @@ const messages = [
 
 // Niveau actuel pour `z-index`
 let currentZIndex = 1;
-
 // Tableau réactif pour suivre les messages affichés
 const activeMessages = ref<{ id: number; message: string; x: number; y: number; zIndex: number }[]>([]);
+const isQuoteVisible = ref(false); // Pour afficher le dicton
+const isQuoteTwoVisible = ref(false);
 
 // Intervalle entre l'affichage des messages (en ms)
 function getRandomInterval(min: number, max: number): number {
     return Math.random() * (max - min) + min;
 }
 
-const randomDelay = getRandomInterval(700, 1000);
-
 // Fonction pour afficher un nouveau message
 function addRandomMessage() {
     // Si tous les messages sont déjà affichés, arrêter
     if (activeMessages.value.length >= messages.length) return;
-
     // Choisir un message aléatoire qui n'est pas encore affiché
     const availableMessages = messages.filter(
         (msg) => !activeMessages.value.some((m) => m.message === msg)
     );
-
     if (availableMessages.length === 0) return;
 
     const randomMessage = availableMessages[Math.floor(Math.random() * availableMessages.length)];
@@ -57,13 +54,6 @@ function addRandomMessage() {
     });
 }
 
-// Fonction pour lancer l'affichage progressif des messages
-function displayMessages() {
-    if (activeMessages.value.length >= messages.length) return;
-    addRandomMessage();
-    setTimeout(displayMessages, randomDelay);
-}
-
 // Fonction pour mettre un message au premier plan
 function bringToFront(messageId: number) {
     const message = activeMessages.value.find((msg) => msg.id === messageId);
@@ -75,12 +65,48 @@ function bringToFront(messageId: number) {
 // Fonction pour supprimer un message
 function removeMessage(id: number) {
     activeMessages.value = activeMessages.value.filter((msg) => msg.id !== id);
-    setTimeout(displayMessages, randomDelay);
+}
+
+// Fonction pour lancer les messages et gérer les transitions
+function timedMessages(duration: number) {
+    const startTime = Date.now();
+
+    function displayMessages() {
+        if (Date.now() - startTime >= duration) {
+            // Arrêter l'ajout de nouveaux messages après la durée
+            fadeOutMessages();
+            return;
+        }
+
+        addRandomMessage();
+        setTimeout(displayMessages, getRandomInterval(500, 1000));
+    }
+
+    function fadeOutMessages() {
+        let delay = 0;
+        activeMessages.value.forEach((msg) => {
+            setTimeout(() => removeMessage(msg.id), delay);
+            delay += 100; // Messages disparaissent progressivement
+        });
+
+        setTimeout(() => {
+            isQuoteVisible.value = true;
+            setTimeout(() => {
+                isQuoteVisible.value = false;
+                isQuoteTwoVisible.value = true;
+            }, 4000); // Afficher le dicton pendant 5 secondes
+            setTimeout(() => {
+                isQuoteTwoVisible.value = false;
+            }, 9000);
+        }, delay);
+    }
+
+    displayMessages();
 }
 
 // Initialisation automatique à la création du composant
 onMounted(() => {
-    displayMessages();
+    timedMessages(12000);
 });
 </script>
 
@@ -98,6 +124,17 @@ onMounted(() => {
             <button @click.stop="removeMessage(msg.id)" class="ml-4 transition duration-200">
                 ✖
             </button>
+        </div>
+        <!-- Dicton -->
+        <div v-if="isQuoteVisible"
+            class="absolute inset-0 flex items-center justify-center text-blanc text-xl font-semibold opacity-0 transition-opacity duration-500"
+            :class="{ 'opacity-100': isQuoteVisible }">
+            <p>Les mots sur Internet laissent des traces...</p>
+        </div>
+        <div v-if="isQuoteTwoVisible"
+            class="absolute inset-0 flex items-center justify-center text-blanc text-xl font-semibold opacity-0 transition-opacity duration-500"
+            :class="{ 'opacity-100': isQuoteTwoVisible }">
+            <p>Mais leurs conséquences peuvent marquer à jamais</p>
         </div>
     </div>
 </template>
