@@ -48,8 +48,8 @@ function addRandomMessage() {
     activeMessages.value.push({
         id: Date.now() + Math.random(), // Utilisé comme clé unique
         message: randomMessage,
-        x: Math.random() * 60 + 10, // Position aléatoire en pourcentage (10% à 90%)
-        y: Math.random() * 60 + 10, // Position aléatoire en pourcentage (10% à 90%)
+        x: Math.random() * 50 + 10, // Position aléatoire en pourcentage
+        y: Math.random() * 70 + 10, // Position aléatoire en pourcentage
         zIndex: currentZIndex++,
     });
 }
@@ -86,7 +86,7 @@ function timedMessages(duration: number) {
         let delay = 0;
         activeMessages.value.forEach((msg) => {
             setTimeout(() => removeMessage(msg.id), delay);
-            delay += 100; // Messages disparaissent progressivement
+            delay += 120; // Messages disparaissent progressivement
         });
 
         setTimeout(() => {
@@ -94,10 +94,10 @@ function timedMessages(duration: number) {
             setTimeout(() => {
                 isQuoteVisible.value = false;
                 isQuoteTwoVisible.value = true;
-            }, 4000); // Afficher le dicton pendant 5 secondes
+            }, 3500); // Afficher le dicton
             setTimeout(() => {
                 isQuoteTwoVisible.value = false;
-            }, 9000);
+            }, 8000);
         }, delay);
     }
 
@@ -106,12 +106,12 @@ function timedMessages(duration: number) {
 
 // Initialisation automatique à la création du composant
 onMounted(() => {
-    timedMessages(12000);
+    timedMessages(13000);
 });
 </script>
 
 <template>
-    <div class="relative h-screen overflow-hidden cursor-default">
+    <div class="relative h-screen p-[5%] overflow-hidden cursor-default">
         <!-- Messages affichés -->
         <div v-for="msg in activeMessages" :key="msg.id"
             class="absolute max-w-sm bg-bleu text-white p-4 rounded-xl shadow-xl flex items-start space-x-4 transition duration-300 ease-in-out"
@@ -127,12 +127,12 @@ onMounted(() => {
         </div>
         <!-- Dicton -->
         <div v-if="isQuoteVisible"
-            class="absolute inset-0 flex items-center justify-center text-blanc text-xl font-semibold opacity-0 transition-opacity duration-500"
+            class="absolute p-[5%] text-center inset-0 flex items-center justify-center text-blanc text-[22px] md:text-xl font-semibold opacity-0 transition-opacity duration-500"
             :class="{ 'opacity-100': isQuoteVisible }">
             <p>Les mots sur Internet laissent des traces...</p>
         </div>
         <div v-if="isQuoteTwoVisible"
-            class="absolute inset-0 flex items-center justify-center text-blanc text-xl font-semibold opacity-0 transition-opacity duration-500"
+            class="absolute p-[5%] text-center inset-0 flex items-center justify-center text-blanc text-[22px] md:text-xl font-semibold opacity-0 transition-opacity duration-500"
             :class="{ 'opacity-100': isQuoteTwoVisible }">
             <p>Mais leurs conséquences peuvent marquer à jamais</p>
         </div>
