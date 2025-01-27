@@ -4,15 +4,6 @@
 @tailwind utilities;
 /* */
 
-/* Fonts */
-@font-face {
-    font-family: "Uncut Sans";
-    src: url("/src/assets/fonts/UncutSans-Variable.ttf") format("truetype"),
-      url("/src/assets/fonts/UncutSans-Variable.woff2") format("woff2"),
-      url("/src/assets/fonts/UncutSans-Regular.otf") format("opentype");
-   }
-/* */
-
 /* General */
 * {
     margin: 0;
@@ -20,9 +11,9 @@
 }
 
 body {
-    font-family: 'Uncut Sans', sans-serif;
-    color: #fafafa;
-    background-color: #181831;
+    font-family: 'Space Grotesk', serif;
+    color: #191A23;
+    background-color: #F3F3F3;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     transition: all 0.3s;
