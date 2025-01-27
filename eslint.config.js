@@ -16,4 +16,11 @@ export default [
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
   skipFormatting,
+
+  {
+    rules: {
+      // Désactiver la règle pour les noms multi-mots
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 ]
