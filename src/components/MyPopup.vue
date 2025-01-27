@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 // Liste des messages offensants
 const messages = [
@@ -97,6 +100,7 @@ function timedMessages(duration: number) {
             }, 3500); // Afficher le dicton
             setTimeout(() => {
                 isQuoteTwoVisible.value = false;
+                router.push('/home');
             }, 8000);
         }, delay);
     }
@@ -114,7 +118,7 @@ onMounted(() => {
     <div class="relative h-screen p-[5%] overflow-hidden cursor-default">
         <!-- Messages affichés -->
         <div v-for="msg in activeMessages" :key="msg.id"
-            class="absolute max-w-sm bg-bleu text-white p-4 rounded-xl shadow-xl flex items-start space-x-4 transition duration-300 ease-in-out"
+            class="absolute max-w-sm bg-bleu text-blanc p-4 rounded-xl shadow-xl flex items-start space-x-4 transition duration-300 ease-in-out"
             :style="{ top: `${msg.y}%`, left: `${msg.x}%`, zIndex: msg.zIndex }" @click="bringToFront(msg.id)">
             <!-- Contenu du message -->
             <div>
@@ -127,12 +131,12 @@ onMounted(() => {
         </div>
         <!-- Dicton -->
         <div v-if="isQuoteVisible"
-            class="absolute p-[5%] text-center inset-0 flex items-center justify-center text-blanc text-[22px] md:text-xl font-semibold opacity-0 transition-opacity duration-500"
+            class="absolute p-[5%] text-center inset-0 flex items-center justify-center text-noir text-base sm:text-lg lg:text-xl font-semibold opacity-0 transition-opacity duration-500"
             :class="{ 'opacity-100': isQuoteVisible }">
             <p>Les mots sur Internet laissent des traces...</p>
         </div>
         <div v-if="isQuoteTwoVisible"
-            class="absolute p-[5%] text-center inset-0 flex items-center justify-center text-blanc text-[22px] md:text-xl font-semibold opacity-0 transition-opacity duration-500"
+            class="absolute p-[5%] text-center inset-0 flex items-center justify-center text-noir text-base sm:text-lg lg:text-xl font-semibold opacity-0 transition-opacity duration-500"
             :class="{ 'opacity-100': isQuoteTwoVisible }">
             <p>Mais leurs conséquences peuvent marquer à jamais</p>
         </div>
