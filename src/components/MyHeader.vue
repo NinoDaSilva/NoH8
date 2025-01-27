@@ -35,7 +35,7 @@ watch(y, (y, oldY) => {
         <nav class="h-full">
             <ul class="menu bg-blanc" v-scroll-lock="activeMenu">
                 <li class="menu__item text-[1.75rem] sm:text-xl">
-                    <RouterLink to="/" class="menu__link" @click="toggleMenu">Accueil</RouterLink>
+                    <RouterLink to="/home" class="menu__link" @click="toggleMenu">Accueil</RouterLink>
                 </li>
                 <li class="menu__item text-[1.75rem] sm:text-xl">
                     <RouterLink to="/about" class="menu__link" @click="toggleMenu">Infos pratiques</RouterLink>
