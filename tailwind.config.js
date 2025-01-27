@@ -7,19 +7,21 @@ export default {
   theme: {
     colors: {
       "blanc": "#fafafa",
-      "noir": "#e1e1e1",
-      "bleuNuit": "#181831",
-      "bleu": "#1da1f2"
+      "gris": "F3F3F3",
+      "noir": "#191a23",
+      "vert": "b9ff66",
     },
     fontSize: {
-      "xs": "0.938rem", //15px
-      "base": "1rem",//16px
-      "lg": "1.25rem",//20px
-      "xl": "2.5rem",//40px
-      "2xl": "3.125rem"//50px
+      "xs": "1rem", //16px
+      "sm": "1.125rem", //18px
+      "base": "1.25rem",//20px
+      "lg": "1.625rem", //26px
+      "xl": "2.25rem", //36px
+      "2xl": "2.5rem", //40px
+      "3xl": "3.75", //60px
     },
     fontFamily: {
-      "uncut-sans": "Uncut Sans"
+      "main": ['Space Grotesk', 'serif'],
     },
     extend: {},
   },
