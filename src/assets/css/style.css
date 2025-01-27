@@ -1,8 +1,75 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* Style TailwindCSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* */
 
+/* General */
 * {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Space Grotesk', serif;
+    color: #191A23;
+    background-color: #F3F3F3;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    transition: all 0.3s;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.center {
+  transform: translate(-50%, -50%);
+}
+
+.footer__class {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding: 4vh;
+}
+/* */
+
+/* Links */
+a {
+  position: relative;
+}
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #141414;
+    opacity: 0;
+    transition-duration: 300ms;
+}
+.link:hover {
+    text-decoration: none;
+    transition-duration: 300ms;
+}
+.link:hover::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+.link--contactme{
+  position: relative;
+}
+.link--contactme::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #edeae6;
+  position: absolute;
+  bottom: -0.2em;
+}
+/* */
