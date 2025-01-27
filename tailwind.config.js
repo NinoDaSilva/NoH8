@@ -18,7 +18,7 @@ export default {
       "lg": "1.625rem", //26px
       "xl": "2.25rem", //36px
       "2xl": "2.5rem", //40px
-      "3xl": "3.75", //60px
+      "3xl": "3.75rem", //60px
     },
     fontFamily: {
       "main": ['Space Grotesk', 'serif'],
