@@ -20,7 +20,7 @@ watch(y, (y, oldY) => {
 </script>
 
 <template>
-    <header class="z-50 fixed w-full bg-blanc text-bleuNuit transition-all duration-500 ease-in-out" :class="{
+    <header class="z-50 fixed w-full bg-blanc transition-all duration-500 ease-in-out" :class="{
         '!-translate-y-full !bg-transparent': !dirTop,
         '!bg-transparent': underLimit,
     }">
