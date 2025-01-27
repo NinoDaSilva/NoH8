@@ -7,9 +7,10 @@ export default {
   theme: {
     colors: {
       "blanc": "#fafafa",
-      "gris": "F3F3F3",
+      "gris": "#F3F3F3",
       "noir": "#191a23",
-      "vert": "b9ff66",
+      "vert": "#b9ff66",
+      "bleu": '#1DA1F2',
     },
     fontSize: {
       "xs": "1rem", //16px
