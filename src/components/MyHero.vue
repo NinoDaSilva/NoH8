@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
     <div class="grid sm:grid-cols-[2fr_1fr] md:grid-cols-2">
-        <div class="sm:max-w-[700px] mx-auto md:mt-5">
+        <div class="sm:max-w-[700px] md:mt-5">
             <h1 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold leading-8 sm:leading-10 lg:leading-tight">
                 <span class="block">
                     <nobr>{{ titleOne }}</nobr>
