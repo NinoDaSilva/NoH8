@@ -4,8 +4,8 @@ defineProps<{
     titleOne: string,
     titleTwo: string,
     description: string,
-    btnLabel: string,
-    btnLink: string,
+    btnLabel?: string,
+    btnLink?: string,
 }>()
 </script>
 
@@ -19,8 +19,8 @@ defineProps<{
                 <span class="block">{{ titleTwo }}</span>
             </h1>
             <img :src="imgUrl" alt="banner illustration" class="mt-1 sm:hidden max-h-[300px] mx-auto">
-            <p class="sm:mt-4 lg:mt-8 lg:text-base">{{ description }}</p>
-            <RouterLink :to="btnLink">
+            <p class="mt-4 lg:mt-8 lg:text-base">{{ description }}</p>
+            <RouterLink :to="btnLink" v-if="btnLink">
                 <button type="button"
                     class="bg-noir max-sm:w-full rounded-lg text-blanc text-center p-3 px-10 mt-4 lg:mt-8">
                     {{ btnLabel }}
