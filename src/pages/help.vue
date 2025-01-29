@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import MyHero from '@/components/MyHero.vue';
+import ContactCard from '@/components/ContactCard.vue';
+import { allContact } from '@/backend';
+
+const contacts = await allContact();
 </script>
 
 <template>
@@ -31,43 +35,7 @@ import MyHero from '@/components/MyHero.vue';
         <section class="mt-5 lg:mt-10 p-5 md:p-8 rounded-2xl bg-vert shadow-lg max-w-[1100px] mx-auto">
             <h2 class="text-lg md:text-2xl font-semibold leading-tight">Contacts et services à votre disposition</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 mt-6">
-                <a href="https://e-enfance.org/notre-temps-cyberviolences-le-numero-vert-net-ecoute-devient-le-3018-plus-simple-et-efficace/"
-                    target="_blank">
-                    <div class="p-4 bg-blanc min-h-full rounded-lg shadow contact-card">
-                        <h3 class="text-base sm:text font-bold">Net Écoute</h3>
-                        <p class="mt-2">
-                            Service d’écoute et d’accompagnement pour les jeunes victimes. Disponible au 3018 ou via
-                            leur
-                            site web.
-                        </p>
-                    </div>
-                </a>
-                <a href="https://www.internet-signalement.gouv.fr/PharosS1/" target="_blank">
-                    <div class="p-4 bg-blanc min-h-full rounded-lg shadow contact-card">
-                        <h3 class="text-base sm:text-lg font-bold">Pharos</h3>
-                        <p class="mt-2">
-                            Plateforme gouvernementale pour signaler des contenus illicites en ligne.
-                        </p>
-                    </div>
-                </a>
-                <a href="https://e-enfance.org/besoin-daide/" target="_blank">
-                    <div class="p-4 bg-blanc min-h-full rounded-lg shadow contact-card">
-                        <h3 class="text-base sm:text-lg font-bold">e-Enfance</h3>
-                        <p class="mt-2">
-                            Association spécialisée dans la protection des enfants en ligne. Propose des conseils et
-                            ressources.
-                        </p>
-                    </div>
-                </a>
-                <a href="https://www.internet-signalement.gouv.fr/PharosS1" target="_blank">
-                    <div class="p-4 bg-blanc min-h-full rounded-lg shadow contact-card">
-                        <h3 class="text-base sm:text-lg font-bold">Police/Gendarmerie</h3>
-                        <p class="mt-2">
-                            Déposer une plainte auprès des forces de l’ordre pour signaler des actes graves de
-                            cyberharcèlement.
-                        </p>
-                    </div>
-                </a>
+                <ContactCard v-for="contact in contacts" v-bind="{ ...contact }" />
             </div>
         </section>
     </main>
