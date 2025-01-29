@@ -12,6 +12,7 @@ export enum Collections {
 	Otps = "_otps",
 	Superusers = "_superusers",
 	Contact = "contact",
+	Faq = "faq",
 	Users = "users",
 }
 
@@ -93,6 +94,12 @@ export type ContactRecord = {
 	name?: string
 }
 
+export type FaqRecord = {
+	description?: string
+	id: string
+	title?: string
+}
+
 export type UsersRecord = {
 	avatar?: string
 	created?: IsoDateString
@@ -113,6 +120,7 @@ export type MfasResponse<Texpand = unknown> = Required<MfasRecord> & BaseSystemF
 export type OtpsResponse<Texpand = unknown> = Required<OtpsRecord> & BaseSystemFields<Texpand>
 export type SuperusersResponse<Texpand = unknown> = Required<SuperusersRecord> & AuthSystemFields<Texpand>
 export type ContactResponse<Texpand = unknown> = Required<ContactRecord> & BaseSystemFields<Texpand>
+export type FaqResponse<Texpand = unknown> = Required<FaqRecord> & BaseSystemFields<Texpand>
 export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>
 
 // Types containing all Records and Responses, useful for creating typing helper functions
@@ -124,6 +132,7 @@ export type CollectionRecords = {
 	_otps: OtpsRecord
 	_superusers: SuperusersRecord
 	contact: ContactRecord
+	faq: FaqRecord
 	users: UsersRecord
 }
 
@@ -134,6 +143,7 @@ export type CollectionResponses = {
 	_otps: OtpsResponse
 	_superusers: SuperusersResponse
 	contact: ContactResponse
+	faq: FaqResponse
 	users: UsersResponse
 }
 
@@ -147,5 +157,6 @@ export type TypedPocketBase = PocketBase & {
 	collection(idOrName: '_otps'): RecordService<OtpsResponse>
 	collection(idOrName: '_superusers'): RecordService<SuperusersResponse>
 	collection(idOrName: 'contact'): RecordService<ContactResponse>
+	collection(idOrName: 'faq'): RecordService<FaqResponse>
 	collection(idOrName: 'users'): RecordService<UsersResponse>
 }
