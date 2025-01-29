@@ -2,6 +2,7 @@
 import MyHero from '@/components/MyHero.vue';
 import ContactCard from '@/components/ContactCard.vue';
 import { allContact } from '@/backend';
+import type { ContactResponse } from '@/pocketbase-types';
 
 const contacts = await allContact();
 </script>
@@ -35,7 +36,7 @@ const contacts = await allContact();
         <section class="mt-5 lg:mt-10 p-5 md:p-8 rounded-2xl bg-vert shadow-lg max-w-[1100px] mx-auto">
             <h2 class="text-lg md:text-2xl font-semibold leading-tight">Contacts et services à votre disposition</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 mt-6">
-                <ContactCard v-for="contact in contacts" v-bind="{ ...contact }" />
+                <ContactCard v-for="contact in contacts" v-bind="{ ...contact as ContactResponse }" :key="contact.id" />
             </div>
         </section>
     </main>
