@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import MyHero from '@/components/MyHero.vue';
 import RessourceCard from '@/components/RessourceCard.vue';
+import FaqComponent from '@/components/FaqComponent.vue';
 </script>
 
 <template>
-    <main class="p-[5%] pt-20 sm:pt-24 max-w-[1920px] mx-auto">
+    <main class="p-[5%] pt-20 sm:pt-24 max-w-[1600px] mx-auto">
         <MyHero titleOne="Le cyberharcèlement :" titleTwo="Une réalité qui dépasse l'écran"
             imgUrl="/img/HomebannerIllustration.png"
             description="Apprenez à reconnaître, comprendre et combattre le cyberharcèlement. Ensemble, nous pouvons faire la différence."
@@ -13,7 +14,7 @@ import RessourceCard from '@/components/RessourceCard.vue';
             <div class="text-center items-center sm:text-start lg:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
                 <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Ressources
                 </h2>
-                <p class="mt-5 lg:mt-0">Des ressources essentielles pour comprendre, prévenir et agir face au
+                <p class="mt-3 lg:mt-0">Des ressources essentielles pour comprendre, prévenir et agir face au
                     cyberharcèlement. Outils, conseils et informations pratiques pour un espace numérique plus sûr pour
                     tous.
                 </p>
@@ -31,6 +32,15 @@ import RessourceCard from '@/components/RessourceCard.vue';
                     imgUrl="/img/selecting-a-value-in-the-browser-window.svg" cardLink="/" highlightTitle="vert"
                     iconColor="vert" bgCardColor="gris" bgIconColor="noir" textColor="noir" />
             </div>
+        </section>
+        <section class="xl:px-[5%] mt-10 sm:mt-20">
+            <div class="text-center items-center sm:text-start sm:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
+                <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Faq
+                </h2>
+                <p class="mt-3 sm:mt-0">Questions les plus fréquentes.
+                </p>
+            </div>
+            <FaqComponent />
         </section>
     </main>
 </template>
