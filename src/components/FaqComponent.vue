@@ -2,9 +2,9 @@
 import { ref } from 'vue';
 import IconCircleArrow2 from './icons/IconCircleArrow2.vue';
 import type { FaqResponse } from '@/pocketbase-types';
-import { allFaq } from '@/backend';
+import { TopFaq } from '@/backend';
 
-const questions = await allFaq();
+const questions = await TopFaq();
 
 // ID de l'élément actuellement ouvert
 const openId = ref<string | null>(null);
@@ -20,11 +20,11 @@ const toggleAccordion = (id: string) => {
             class=" bg-gris overflow-hidden rounded-3xl cursor-pointer faq-card group transition-all duration-300"
             @click="toggleAccordion(question.id)">
             <!-- En-tête de la carte -->
-            <div class="flex p-5 py-1 sm:py-3 lg:p-5 lg:px-8 items-center justify-between"
+            <div class="flex p-5 py-3 lg:p-5 lg:px-8 items-center justify-between"
                 :class="openId === question.id ? 'bg-vert' : 'hover:bg-vert'">
-                <h3 class="font-semibold leading-tight sm:text-base lg:text-lg">{{ question.title }}</h3>
+                <h3 class="font-semibold mr-10 leading-tight sm:text-base lg:text-lg">{{ question.title }}</h3>
                 <IconCircleArrow2 :bgColor="openId === question.id"
-                    class="w-[30px] sm:w-[35px] transform transition-transform duration-300"
+                    class="min-w-[26px] w-[26px] sm:min-w-[35px] sm:w-[35px] transform transition-transform duration-300"
                     :class="openId === question.id ? '-rotate-180' : '-rotate-90'" />
             </div>
 

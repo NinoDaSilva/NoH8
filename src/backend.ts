@@ -16,8 +16,16 @@ export async function allContact() {
     return records;
 }
 
-// Retourne tous les question (faq)
+// Retourne toutes les questions (faq)
 export async function allFaq() {
   const records = await pb.collection('faq').getFullList();
+  return records;
+}
+
+// Retourne les questions de la catégorie "top"
+export async function TopFaq() {
+  const records = await pb.collection('faq').getFullList({
+    filter: "category='top'"
+  });
   return records;
 }
