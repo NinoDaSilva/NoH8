@@ -8,8 +8,20 @@ import MyFooter from './components/MyFooter.vue';
   <MyHeader />
 
   <Suspense>
-    <RouterView />
+    <div class="main__container">
+      <RouterView />
+    </div>
   </Suspense>
 
   <MyFooter />
 </template>
+
+<style>
+.main__container {
+  min-height: calc(100vh - 377px - 80px + 40px);
+
+  @media(max-width: 768px) {
+    min-height: calc(100vh - 398px - 64px + 60px);
+  }
+}
+</style>
