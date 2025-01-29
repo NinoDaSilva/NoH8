@@ -9,3 +9,9 @@ else
 
 export const pb = new PocketBase(pocketbase_ip);
 //
+
+// Retourne tous les contacts
+export async function allContact() {
+    const records = await pb.collection('contact').getFullList();
+    return records;
+}
