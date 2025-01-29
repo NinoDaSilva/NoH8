@@ -29,47 +29,25 @@ body::-webkit-scrollbar {
 .center {
   transform: translate(-50%, -50%);
 }
-
-.footer__class {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  padding: 4vh;
-}
 /* */
 
 /* Links */
-a {
+.link {
+  text-decoration: none;
+  transition: all 0.3s ease;
   position: relative;
 }
-a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1em;
-    background-color: #141414;
-    opacity: 0;
-    transition-duration: 300ms;
-}
-.link:hover {
-    text-decoration: none;
-    transition-duration: 300ms;
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #b9ff66;
+  transition: width 0.4s ease-in-out;
 }
 .link:hover::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-}
-.link--contactme{
-  position: relative;
-}
-.link--contactme::before {
-  content: "";
-  display: block;
   width: 100%;
-  height: 2px;
-  background-color: #edeae6;
-  position: absolute;
-  bottom: -0.2em;
 }
 /* */
