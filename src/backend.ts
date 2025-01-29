@@ -15,3 +15,9 @@ export async function allContact() {
     const records = await pb.collection('contact').getFullList();
     return records;
 }
+
+// Retourne tous les question (faq)
+export async function allFaq() {
+  const records = await pb.collection('faq').getFullList();
+  return records;
+}
