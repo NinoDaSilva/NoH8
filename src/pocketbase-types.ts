@@ -12,6 +12,7 @@ export enum Collections {
 	Otps = "_otps",
 	Superusers = "_superusers",
 	Contact = "contact",
+	Evidence = "evidence",
 	Faq = "faq",
 	Users = "users",
 }
@@ -94,7 +95,27 @@ export type ContactRecord = {
 	name?: string
 }
 
+export enum EvidenceTypeOptions {
+	"victime" = "victime",
+	"temoin" = "temoin",
+	"autre" = "autre",
+}
+export type EvidenceRecord = {
+	approuved?: boolean
+	created?: IsoDateString
+	description?: string
+	id: string
+	type?: EvidenceTypeOptions
+	username?: string
+}
+
+export enum FaqCategoryOptions {
+	"top" = "top",
+	"victim" = "victim",
+	"temoin" = "temoin",
+}
 export type FaqRecord = {
+	category?: FaqCategoryOptions
 	description?: string
 	id: string
 	title?: string
@@ -120,6 +141,7 @@ export type MfasResponse<Texpand = unknown> = Required<MfasRecord> & BaseSystemF
 export type OtpsResponse<Texpand = unknown> = Required<OtpsRecord> & BaseSystemFields<Texpand>
 export type SuperusersResponse<Texpand = unknown> = Required<SuperusersRecord> & AuthSystemFields<Texpand>
 export type ContactResponse<Texpand = unknown> = Required<ContactRecord> & BaseSystemFields<Texpand>
+export type EvidenceResponse<Texpand = unknown> = Required<EvidenceRecord> & BaseSystemFields<Texpand>
 export type FaqResponse<Texpand = unknown> = Required<FaqRecord> & BaseSystemFields<Texpand>
 export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>
 
@@ -132,6 +154,7 @@ export type CollectionRecords = {
 	_otps: OtpsRecord
 	_superusers: SuperusersRecord
 	contact: ContactRecord
+	evidence: EvidenceRecord
 	faq: FaqRecord
 	users: UsersRecord
 }
@@ -143,6 +166,7 @@ export type CollectionResponses = {
 	_otps: OtpsResponse
 	_superusers: SuperusersResponse
 	contact: ContactResponse
+	evidence: EvidenceResponse
 	faq: FaqResponse
 	users: UsersResponse
 }
@@ -157,6 +181,7 @@ export type TypedPocketBase = PocketBase & {
 	collection(idOrName: '_otps'): RecordService<OtpsResponse>
 	collection(idOrName: '_superusers'): RecordService<SuperusersResponse>
 	collection(idOrName: 'contact'): RecordService<ContactResponse>
+	collection(idOrName: 'evidence'): RecordService<EvidenceResponse>
 	collection(idOrName: 'faq'): RecordService<FaqResponse>
 	collection(idOrName: 'users'): RecordService<UsersResponse>
 }
