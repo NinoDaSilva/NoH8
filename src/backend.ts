@@ -29,3 +29,27 @@ export async function TopFaq() {
   });
   return records;
 }
+
+// Retourne touts les témoignages du plus récent au plus ancien
+export async function allEvidence() {
+  const records = await pb.collection('evidence').getFullList({
+    sort: '-created'
+  });
+  return records;
+}
+
+// Retourne les témoignages de la catégorie "victime"
+export async function victimEvidence() {
+  const records = await pb.collection('evidence').getFullList({
+    filter: "category='victime'"
+  });
+  return records;
+}
+
+// Retourne les témoignages de la catégorie "temoin"
+export async function temoinEvidence() {
+  const records = await pb.collection('evidence').getFullList({
+    filter: "category='temoin'"
+  });
+  return records;
+}
