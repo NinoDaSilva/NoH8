@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import IconCircleArrow2 from './icons/IconCircleArrow2.vue';
-import type { FaqResponse } from '@/pocketbase-types';
 import { TopFaq } from '@/backend';
 
 const questions = await TopFaq();
