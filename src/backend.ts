@@ -32,11 +32,11 @@ export async function TopFaq() {
 
 // Retourne touts les témoignages du plus récent au plus ancien
 export async function allEvidence() {
-  const records = await pb.collection('evidence').getFullList({
+  const records = await pb.collection('evidence').getList(1, 10, {
     sort: '-created',
     filter: "approuved=true"
   });
-  return records;
+  return records.items;
 }
 
 // Retourne les témoignages de la catégorie "victime"
