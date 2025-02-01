@@ -2,15 +2,16 @@
 import MyHero from '@/components/MyHero.vue';
 import RessourceCard from '@/components/RessourceCard.vue';
 import FaqComponent from '@/components/FaqComponent.vue';
+import EvidenceCarousel from '@/components/EvidenceCarousel.vue';
 </script>
 
 <template>
-    <main class="p-[5%] pt-20 sm:pt-24 max-w-[1600px] mx-auto">
+    <main class="py-[5%] pt-20 sm:pt-24 max-w-[1500px] mx-auto">
         <MyHero titleOne="Le cyberharcèlement :" titleTwo="Une réalité qui dépasse l'écran"
             imgUrl="/img/HomebannerIllustration.png"
             description="Apprenez à reconnaître, comprendre et combattre le cyberharcèlement. Ensemble, nous pouvons faire la différence."
-            btnLabel="Besoin d'aide ?" btnLink="/help" />
-        <section class="xl:px-[5%] mt-10 sm:mt-20">
+            btnLabel="Besoin d'aide ?" btnLink="/help" class="px-[5%]" />
+        <section class="px-[5%] mt-10 sm:mt-20">
             <div class="text-center items-center sm:text-start lg:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
                 <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Ressources
                 </h2>
@@ -33,7 +34,16 @@ import FaqComponent from '@/components/FaqComponent.vue';
                     iconColor="vert" bgCardColor="gris" bgIconColor="noir" textColor="noir" />
             </div>
         </section>
-        <section class="xl:px-[5%] mt-10 sm:mt-20">
+        <section class="sm:px-[5%] mt-10 sm:mt-20">
+            <div class="text-center items-center sm:text-start sm:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
+                <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Témoignages
+                </h2>
+                <p class="mt-3 sm:mt-0">Les voix des victimes et témoins de cyberharcèlement.
+                </p>
+            </div>
+            <EvidenceCarousel />
+        </section>
+        <section class="px-[5%] mt-10 sm:mt-20">
             <div class="text-center items-center sm:text-start sm:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
                 <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Faq
                 </h2>
