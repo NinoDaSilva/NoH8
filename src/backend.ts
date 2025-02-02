@@ -30,8 +30,17 @@ export async function TopFaq() {
   return records;
 }
 
-// Retourne les 10 derniers témoignages du plus récent au plus ancien
+// Retourne tous les témoignages du plus récent au plus ancien
 export async function allEvidence() {
+  const records = await pb.collection('evidence').getFullList({
+    sort: '-created',
+    filter: "approuved=true"
+  });
+  return records;
+}
+
+// Retourne les 10 derniers témoignages du plus récent au plus ancien
+export async function tenEvidence() {
   const records = await pb.collection('evidence').getList(1, 10, {
     sort: '-created',
     filter: "approuved=true"

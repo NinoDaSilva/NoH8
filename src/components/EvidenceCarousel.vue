@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import { allEvidence } from '@/backend'
+import { tenEvidence } from '@/backend'
 import Swiper from 'swiper'
 import 'swiper/css'
 import IconSimpleArrow from './icons/IconSimpleArrow.vue'
 
-const evidences = await allEvidence()
+const evidences = await tenEvidence()
 const expanded = ref<Record<string, boolean>>({}) // Stocke l'état d'affichage de chaque témoignage
 const slider = ref<Swiper>()
 
@@ -77,7 +77,8 @@ onMounted(() => {
             </button>
             <div class="swiper-pagination"></div>
             <button @click="next">
-                <IconSimpleArrow arrowColor="blanc" class="swiper-button-next  rotate-[30deg] w-[35px] cursor-pointer opacity-80" />
+                <IconSimpleArrow arrowColor="blanc"
+                    class="swiper-button-next  rotate-[30deg] w-[35px] cursor-pointer opacity-80" />
             </button>
         </div>
     </div>
