@@ -36,8 +36,8 @@ const createEvidence = async () => {
 </script>
 
 <template>
-    <div class="bg-gris p-[5%]">
-        <form @submit.prevent="createEvidence" class="max-w-[500px]">
+    <div class="bg-gris rounded-[40px] p-[5%] lg:px-[8%] md:py-[10rem] bg-image flex justify-center md:block">
+        <form @submit.prevent="createEvidence" class="w-full max-w-[500px]">
             <fieldset class="flex gap-10">
                 <legend class="block mb-4 font-medium text-base">Vous avez été ?</legend>
                 <div class="flex items-center gap-2">
@@ -67,3 +67,13 @@ const createEvidence = async () => {
         </form>
     </div>
 </template>
+
+<style>
+@media screen and (min-width: 768px) {
+    .bg-image {
+        background-image: url('/img/IllustrationForm.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+</style>
