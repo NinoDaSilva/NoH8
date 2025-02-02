@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-import { tenEvidence } from '@/backend'
+import { ref, onMounted, computed } from 'vue'
+import { tenEvidence, allEvidence } from '@/backend'
 import Swiper from 'swiper'
 import 'swiper/css'
 import IconSimpleArrow from './icons/IconSimpleArrow.vue'
 
-const evidences = await tenEvidence()
+const props = defineProps<{ type?: string }>()
+
+const evidences = ref()
 const expanded = ref<Record<string, boolean>>({}) // Stocke l'état d'affichage de chaque témoignage
 const slider = ref<Swiper>()
 
@@ -24,7 +26,14 @@ const prev = () => {
     slider.value?.slidePrev()
 }
 
-onMounted(() => {
+// Récupération des témoignages en fonction de la prop `type`
+const fetchEvidences = async () => {
+    evidences.value = await (props.type === 'all' ? allEvidence() : tenEvidence())
+}
+
+onMounted(async () => {
+    await fetchEvidences()
+
     // Initialiser Swiper
     slider.value = new Swiper('.swiper-container', {
         loop: true,
