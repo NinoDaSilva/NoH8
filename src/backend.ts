@@ -10,6 +10,9 @@ else
 export const pb = new PocketBase(pocketbase_ip);
 //
 
+// globally disable auto cancellation
+pb.autoCancellation(false);
+
 // Retourne tous les contacts
 export async function allContact() {
     const records = await pb.collection('contact').getFullList();

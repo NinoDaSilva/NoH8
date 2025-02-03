@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import IconCircleArrow2 from './icons/IconCircleArrow2.vue';
 import { TopFaq, allFaq, parentFaq, proFaq, safeFaq } from '@/backend';
 
@@ -38,6 +38,7 @@ const toggleAccordion = (id: string) => {
 };
 
 onMounted(fetchFaq);
+watch(() => props.type, fetchFaq);
 </script>
 
 <template>
