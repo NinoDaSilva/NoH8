@@ -16,8 +16,9 @@ export async function allContact() {
     return records;
 }
 
+/* FAQ */
 // Retourne toutes les questions (faq)
-export async function allFaq() {
+export async function allallFaq() {
   const records = await pb.collection('faq').getFullList();
   return records;
 }
@@ -30,6 +31,40 @@ export async function TopFaq() {
   return records;
 }
 
+// Retourne les questions de la catégorie "all"
+export async function allFaq() {
+  const records = await pb.collection('faq').getFullList({
+    filter: "category='all'"
+  });
+  return records;
+}
+
+// Retourne les questions de la catégorie "parent"
+export async function parentFaq() {
+  const records = await pb.collection('faq').getFullList({
+    filter: "category='parent'"
+  });
+  return records;
+}
+
+// Retourne les questions de la catégorie "pro"
+export async function proFaq() {
+  const records = await pb.collection('faq').getFullList({
+    filter: "category='pro'"
+  });
+  return records;
+}
+
+// Retourne les questions de la catégorie "safe"
+export async function safeFaq() {
+  const records = await pb.collection('faq').getFullList({
+    filter: "category='safe'"
+  });
+  return records;
+}
+/* */
+
+/* Témoignage */
 // Retourne tous les témoignages du plus récent au plus ancien
 export async function allEvidence() {
   const records = await pb.collection('evidence').getFullList({
@@ -63,3 +98,4 @@ export async function temoinEvidence() {
   });
   return records;
 }
+/* */
