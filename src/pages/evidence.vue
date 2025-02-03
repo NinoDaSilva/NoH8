@@ -7,7 +7,7 @@ import EvidenceCarousel from '@/components/EvidenceCarousel.vue';
 <template>
     <main class="py-[5%] pt-20 sm:pt-24 max-w-[1500px] mx-auto">
         <MyHero titleOne="Vos témoignages :" titleTwo="Parce que c'est important d'en parler"
-            imgUrl="/img/illu-help.svg"
+            imgUrl="/img/evidence-contact.png"
             description="Découvrez les témoignages de celles et ceux qui ont osé parler. Ensemble, brisons le silence et luttons contre le cyberharcèlement."
             class="px-[5%]" />
 
