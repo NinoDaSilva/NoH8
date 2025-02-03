@@ -38,7 +38,7 @@ watch(y, (y, oldY) => {
                     <RouterLink to="/home" class="menu__link" @click="toggleMenu">Accueil</RouterLink>
                 </li>
                 <li class="menu__item text-[1.75rem] sm:text-xl">
-                    <RouterLink to="/about" class="menu__link" @click="toggleMenu">Infos pratiques</RouterLink>
+                    <RouterLink to="/ressources" class="menu__link" @click="toggleMenu">Infos pratiques</RouterLink>
                 </li>
                 <li class="menu__item text-[1.75rem] sm:text-xl">
                     <RouterLink to="/evidence" class="menu__link" @click="toggleMenu">Témoignages</RouterLink>

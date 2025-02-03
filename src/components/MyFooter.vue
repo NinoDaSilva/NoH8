@@ -11,7 +11,7 @@ const year = new Date().getFullYear();
                     <RouterLink to="/home" class="link">Accueil</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/ressource" class="link">Ressources</RouterLink>
+                    <RouterLink to="/ressources" class="link">Ressources</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/help" class="link">Aides</RouterLink>
