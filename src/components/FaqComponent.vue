@@ -1,16 +1,43 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import IconCircleArrow2 from './icons/IconCircleArrow2.vue';
-import { TopFaq } from '@/backend';
+import { TopFaq, allFaq, parentFaq, proFaq, safeFaq } from '@/backend';
 
-const questions = await TopFaq();
+const props = defineProps<{ type?: string }>()
 
+const questions = ref();
+
+// Récupération des questions en fonction de la prop `type`
+const fetchFaq = async () => {
+    switch (props.type) {
+        case 'top':
+            questions.value = await TopFaq();
+            break;
+        case 'all':
+            questions.value = await allFaq();
+            break;
+        case 'parent':
+            questions.value = await parentFaq();
+            break;
+        case 'pro':
+            questions.value = await proFaq();
+            break;
+        case 'safe':
+            questions.value = await safeFaq();
+            break;
+        default:
+            questions.value = await TopFaq(); // Fallback si le type est inconnu
+            break;
+    }
+};
 // ID de l'élément actuellement ouvert
 const openId = ref<string | null>(null);
 // Fonction pour ouvrir/fermer l'élément
 const toggleAccordion = (id: string) => {
     openId.value = openId.value === id ? null : id;
 };
+
+onMounted(fetchFaq);
 </script>
 
 <template>
