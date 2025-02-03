@@ -9,6 +9,14 @@ import RessourceCard from '@/components/RessourceCard.vue';
             imgUrl="/img/documents-ressources.png"
             description="Retrouvez ici des conseils et guides pour vous protéger, soutenir les victimes et faire face au cyberharcèlement. Vous n'êtes pas seul(e), des solutions existent."
             class="px-[5%]" />
+        <div class="mt-10 md:mt-20 px-[5%]">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zUW3JyLtYsQ?si=SnV4YYodaSi0eU8r"
+                title="C'est quoi le cyberharcèlement ? - 1 jour, 1 question" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                class="max-sm:h-full max-sm:w-auto lg:w-[80%] lg:min-h-[600px] max-w-full mx-auto border border-gris shadow-sm rounded-lg">
+            </iframe>
+        </div>
         <section class="px-[5%] mt-10 sm:mt-20">
             <div class="text-center items-center sm:text-start lg:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
                 <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Ressources
