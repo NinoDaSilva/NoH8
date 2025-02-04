@@ -1,9 +1,14 @@
 <script lang="ts" setup>
+import MyHero from '@/components/MyHero.vue';
 import FaqComponent from '@/components/FaqComponent.vue';
 </script>
 
 <template>
     <main class="py-[5%] pt-20 sm:pt-24 max-w-[1500px] mx-auto">
+        <MyHero titleOne="FAQ :" titleTwo="Informer pour protéger, agir pour changer" imgUrl="/img/bwink_single.png"
+            description="Trouvez ici des réponses à vos questions spécifiques sur le cyberharcèlement, adaptées aux étudiants, aux jeunes, aux parents et aux professionnels."
+            class="px-[5%]" />
+
         <section class="px-[5%] mt-10 sm:mt-20">
             <div class="text-center items-center sm:text-start lg:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
                 <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Questions
