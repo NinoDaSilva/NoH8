@@ -10,7 +10,10 @@ const app = createApp(App)
 app.use(
     createRouter({
         history: createWebHistory(),
-        routes
+        routes,
+        scrollBehavior(to, from, savedPosition) {
+            return { top: 0, behavior: 'smooth' } // Défilement fluide vers le haut
+        }
     })
 )
 
