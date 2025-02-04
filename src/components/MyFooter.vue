@@ -20,6 +20,9 @@ const year = new Date().getFullYear();
                     <RouterLink to="/evidence" class="link">Témoignages</RouterLink>
                 </li>
                 <li>
+                    <RouterLink to="/faq" class="link">FAQ</RouterLink>
+                </li>
+                <li>
                     <RouterLink to="/about" class="link">À propos</RouterLink>
                 </li>
             </ul>
