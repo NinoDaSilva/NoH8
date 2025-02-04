@@ -28,16 +28,18 @@ import RessourceCard from '@/components/RessourceCard.vue';
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10 max-w-[1350px] mx-auto">
                 <RessourceCard titleOne="Qu'est-ce que" titleTwo="le cyberharcèlement ?"
-                    imgUrl="/img/web-search-with-elements.svg" cardLink="/" highlightTitle="vert" iconColor="vert"
-                    bgCardColor="gris" bgIconColor="noir" textColor="noir" />
-                <RessourceCard titleOne="L'impact du cyberharcèlement" titleTwo="sur les victimes"
-                    imgUrl="/img/volumetric-analytics-of-different-types-in-web-browsers.svg" cardLink="/"
-                    iconColor="vert" bgCardColor="vert" bgIconColor="noir" textColor="noir" />
-                <RessourceCard titleOne="Comment reconnaître" titleTwo="le cyberharcèlement ?"
-                    imgUrl="/img/browser-window-with-emoticon-likes-and-stars-around.png" cardLink="/" />
-                <RessourceCard titleOne="Les bonnes pratiques" titleTwo="pour se protéger"
-                    imgUrl="/img/selecting-a-value-in-the-browser-window.svg" cardLink="/" highlightTitle="vert"
+                    imgUrl="/img/web-search-with-elements.svg" cardLink="/ressources/CyberWhat" highlightTitle="vert"
                     iconColor="vert" bgCardColor="gris" bgIconColor="noir" textColor="noir" />
+                <RessourceCard titleOne="L'impact du cyberharcèlement" titleTwo="sur les victimes"
+                    imgUrl="/img/volumetric-analytics-of-different-types-in-web-browsers.svg"
+                    cardLink="/ressources/CyberImpact" iconColor="vert" bgCardColor="vert" bgIconColor="noir"
+                    textColor="noir" />
+                <RessourceCard titleOne="Comment reconnaître" titleTwo="le cyberharcèlement ?"
+                    imgUrl="/img/browser-window-with-emoticon-likes-and-stars-around.png"
+                    cardLink="/ressources/CyberHow" />
+                <RessourceCard titleOne="Les bonnes pratiques" titleTwo="pour se protéger"
+                    imgUrl="/img/selecting-a-value-in-the-browser-window.svg" cardLink="/ressources/CyberGood"
+                    highlightTitle="vert" iconColor="vert" bgCardColor="gris" bgIconColor="noir" textColor="noir" />
             </div>
         </section>
     </main>
