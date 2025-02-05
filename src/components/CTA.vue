@@ -8,8 +8,8 @@ defineProps<{
 </script>
 
 <template>
-    <div class="bg-gris p-6 md:p-10 rounded-3xl">
-        <div class="max-w-[600px]">
+    <div class="relative bg-gris p-6 md:p-12 md:my-10 md:min-h-[320px] rounded-3xl">
+        <div class="w-full sm:w-1/2 max-w-[600px]">
             <h5 class="text-base md:text-lg font-semibold mb-2">{{ title }}</h5>
             <p>{{ description }}</p>
             <RouterLink :to="btnLink" v-if="btnLink">
@@ -19,5 +19,7 @@ defineProps<{
                 </button>
             </RouterLink>
         </div>
+        <img src="/img/illu-call2action.svg" alt="Illustration"
+            class="hidden sm:block absolute top-1/2 right-10 lg:right-20 -translate-y-1/2 w-2/5 md:max-w-[380px]">
     </div>
 </template>
