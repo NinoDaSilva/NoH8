@@ -6,7 +6,7 @@ import CTA from '@/components/CTA.vue';
 
 <template>
     <main class="py-[5%] pt-20 sm:pt-24 max-w-[1500px] mx-auto">
-        <MyHero titleOne="Qu'est-ce que" titleTwo="le cyberharcèlement ?" imgUrl="/img/documents-ressources.png"
+        <MyHero titleOne="L'impact du" titleTwo="cyberharcèlement" imgUrl="/img/documents-ressources.png"
             description="Le cyberharcèlement ne se limite pas à de simples conflits en ligne. Il s'agit d'une forme de violence digitale aux conséquences réelles et souvent dramatiques pour les personnes concernées. Derrière chaque message haineux, chaque rumeur diffusée, chaque insulte anonyme, il y a des individus qui souffrent en silence."
             class="px-[5%]" />
         <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
