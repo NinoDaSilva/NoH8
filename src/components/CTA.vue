@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 defineProps<{
-    title: string;
+    titleOne: string;
+    titleTwo?: string;
     description: string;
     btnLabel: string;
     btnLink: string;
@@ -10,7 +11,10 @@ defineProps<{
 <template>
     <div class="relative bg-gris p-6 md:p-12 md:my-10 md:min-h-[320px] rounded-3xl max-w-[1250px] mx-auto">
         <div class="w-full sm:w-1/2 max-w-[600px]">
-            <h5 class="text-base md:text-lg font-semibold mb-2">{{ title }}</h5>
+            <div class="text-base md:text-lg font-semibold mb-2">
+                <h5>{{ titleOne }}</h5>
+                <h5>{{ titleTwo }}</h5>
+            </div>
             <p>{{ description }}</p>
             <RouterLink :to="btnLink" v-if="btnLink">
                 <button type="button"

@@ -112,7 +112,7 @@ import CTA from '@/components/CTA.vue';
                 <p>Si vous ou quelqu'un de votre entourage est concerné, n'hésitez pas à demander de l'aide.</p>
 
             </div>
-            <CTA title="Parler et se faire aider"
+            <CTA titleOne="Parler et se faire aider"
                 description="Briser le silence est essentiel pour surmonter cette épreuve. Il existe des ressources pour accompagner les victimes"
                 btnLabel="Besoin d'aide" btnLink="/help" class="mt-10 md:mt-20" />
         </div>
