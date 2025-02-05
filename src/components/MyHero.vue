@@ -18,7 +18,7 @@ defineProps<{
                 </span>
                 <span class="block">{{ titleTwo }}</span>
             </h1>
-            <img :src="imgUrl" alt="banner illustration" class="mt-1 sm:hidden max-h-[300px] mx-auto">
+            <img :src="imgUrl" alt="banner illustration" class="mt-5 sm:mt-2 sm:hidden max-h-[300px] mx-auto">
             <p class="mt-4 lg:mt-8 lg:text-base">{{ description }}</p>
             <RouterLink :to="btnLink" v-if="btnLink">
                 <button type="button"
