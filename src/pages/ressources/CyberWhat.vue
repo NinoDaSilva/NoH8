@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import MyHero from '@/components/MyHero.vue';
+import CTA from '@/components/CTA.vue';
 </script>
 
 <template>
@@ -20,17 +21,17 @@ import MyHero from '@/components/MyHero.vue';
                 d'informations
                 personnelles, en passant par le chantage ou l'intimidation.
             </p>
-            <ul class="my-2 grid gap-2">
-                <li><span class="text-base">▸</span>Il se produit principalement sur les réseaux sociaux, les
+            <ul class="my-2 grid gap-2 list-disc ml-5">
+                <li>Il se produit principalement sur les réseaux sociaux, les
                     forums,
                     les
                     applications de
                     messagerie, et
                     les jeux en ligne.</li>
-                <li><span class="text-base">▸</span>Il peut être anonyme, ce qui complique l'identification des
+                <li>Il peut être anonyme, ce qui complique l'identification des
                     agresseurs.
                 </li>
-                <li><span class="text-base">▸</span>Les victimes sont souvent isolées et n'osent pas en parler.
+                <li>Les victimes sont souvent isolées et n'osent pas en parler.
                 </li>
             </ul>
             <p>Contrairement au harcèlement classique, il peut avoir une portée massive et virale.</p>
@@ -51,24 +52,24 @@ import MyHero from '@/components/MyHero.vue';
             <p>Le cyberharcèlement prend de nombreuses formes, toutes ayant des répercussions graves sur les victimes.
             </p>
             <p>Voici les types les plus courants :</p>
-            <ul class="my-2 grid gap-2">
-                <li><span class="text-base">▸</span><a href="/" class="underline">Le flaming</a> : Débats en ligne
+            <ul class="my-2 grid gap-2 list-disc ml-5">
+                <li><a href="/" class="underline">Le flaming</a> : Débats en ligne
                     agressifs et violents,
                     souvent
                     intentionnels.</li>
-                <li><span class="text-base">▸</span><a href="/" class="underline">L'outing et le doxxing</a> :
+                <li><a href="/" class="underline">L'outing et le doxxing</a> :
                     Divulgation
                     d'informations
                     personnelles ou
                     confidentielles.</li>
-                <li><span class="text-base">▸</span><a href="/" class="underline">Le revenge porn</a> : Diffusion non
+                <li><a href="/" class="underline">Le revenge porn</a> : Diffusion non
                     consentie de contenus
                     intimes.</li>
-                <li><span class="text-base">▸</span><a href="/" class="underline">Les raids numériques</a> : Attaques
+                <li><a href="/" class="underline">Les raids numériques</a> : Attaques
                     collectives menées par
                     des groupes
                     sur une cible.</li>
-                <li><span class="text-base">▸</span><a href="/" class="underline">Le body shaming et slut shaming</a> :
+                <li><a href="/" class="underline">Le body shaming et slut shaming</a> :
                     Critiques basées sur
                     l'apparence
                     ou le comportement.</li>
@@ -93,9 +94,9 @@ import MyHero from '@/components/MyHero.vue';
             <p>L'anonymat sur Internet donne aux harceleurs un sentiment d'impunité, rendant les attaques plus
                 violentes et persistantes.</p>
 
-            <div>
-                <h4>L'impact du cyberharcèlement sur les victimes</h4>
-            </div>
+            <CTA titleOne="L'impact du cyberharcèlement"
+                description="Derriere chaque message haineux, chaque rumeur diffusée, chaque insulte anonyme, il y a des individus qui souffrent en silence."
+                btnLabel="En savoir plus" btnLink="/ressources/CyberImpact" />
         </section>
     </main>
 </template>
