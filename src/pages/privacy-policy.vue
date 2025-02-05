@@ -50,7 +50,7 @@
             <ul>
                 <li>Droit d'accès : Vous pouvez demander quelles données sont collectées.</li>
                 <li>Droit de suppression : Vous pouvez demander la suppression de votre témoignage si vous en faites la
-                    demande à <a href="@mailto:contact@nohate.com" class="underline">contact@nohate.com</a>.</li>
+                    demande à <a href="mailto:contact@nohate.com" class="underline">contact@nohate.com</a>.</li>
                 <li>Droit d'opposition : Vous pouvez refuser l'utilisation des cookies analytiques via les
                     paramètres de votre navigateur.</li>
             </ul>
@@ -58,7 +58,7 @@
         <section class="mt-10">
             <h2 class="font-bold text-base md:text-lg mb-3">4. Contact</h2>
             <p>Si vous avez des questions ou souhaitez exercer vos droits, vous pouvez nous contacter à <a
-                    href="@mailto:contact@nohate.com" class="underline">contact@nohate.com</a>.</p>
+                    href="mailto:contact@nohate.com" class="underline">contact@nohate.com</a>.</p>
         </section>
     </main>
 </template>

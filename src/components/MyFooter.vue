@@ -28,7 +28,7 @@ const year = new Date().getFullYear();
             </ul>
             <section class="mt-10 md:mt-14">
                 <h3 class="bg-vert text-noir inline-block px-1 rounded-md text-sm sm:text-base font-medium">Contact</h3>
-                <p class="mt-3">Email : <a href="@mailto:contact@nohate.com" class="underline">contact@nohate.com</a>
+                <p class="mt-3">Email : <a href="mailto:contact@nohate.com" class="underline">contact@nohate.com</a>
                 </p>
             </section>
             <div class="md:flex flex-wrap gap-5 border-t pt-10 mt-12 md:mt-14 border-blanc items-center">
