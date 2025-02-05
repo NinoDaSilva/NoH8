@@ -9,7 +9,7 @@ import MyHero from '@/components/MyHero.vue';
                 physique. Le cyberharcèlement est une réalité qui touche des millions de personnes, souvent dans le
                 silence. Mais qu'est-ce que le cyberharcèlement exactement ? Explications." class="px-[5%]" />
         <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
-            <h2 class="inline-block underline decoration-vert text-base sm:text-lg lg:text-xl mb-1 font-semibold">
+            <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">
                 Définition
                 du
                 cyberharcèlement</h2>
@@ -45,7 +45,7 @@ import MyHero from '@/components/MyHero.vue';
             </div>
         </section>
         <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
-            <h2 class="inline-block underline decoration-vert text-base sm:text-lg lg:text-xl mb-1 font-semibold">Les
+            <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">Les
                 principales
                 formes de cyberharcèlement</h2>
             <p>Le cyberharcèlement prend de nombreuses formes, toutes ayant des répercussions graves sur les victimes.
@@ -85,7 +85,7 @@ import MyHero from '@/components/MyHero.vue';
             </div>
         </section>
         <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
-            <h2 class="inline-block underline decoration-vert text-base sm:text-lg lg:text-xl mb-1 font-semibold">Un
+            <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">Un
                 phénomène
                 qui prend de l'ampleur</h2>
             <p>Avec l'explosion du numérique, le cyberharcèlement est devenu un fléau mondial. En France, selon une
