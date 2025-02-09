@@ -12,7 +12,8 @@ const contacts = await allContact();
         <MyHero titleOne="Besoin d'aide ?" titleTwo="Services et contacts utiles" imgUrl="/img/illu-help.svg"
             description="Que vous soyez victime, témoin, parent ou professionnel, cette page regroupe des contacts essentiels pour vous soutenir." />
         <section class="mt-5 lg:mt-10 xl:px-[5%]">
-            <h2 class="text-lg lg:text-xl font-semibold">Vous êtes victime ? Voici les étapes à suivre</h2>
+            <h2 class="text-lg lg:text-xl font-semibold leading-tight">Vous êtes victime ? Voici les étapes à suivre
+            </h2>
             <ul class="mt-2 list-disc text-xs lg:text-sm list-inside">
                 <li><strong>Conservez des preuves :</strong> capturez les messages, photos ou vidéos incriminants.</li>
                 <li><strong>Sécurisez vos comptes :</strong> modifiez vos mots de passe et activez la double
