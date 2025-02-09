@@ -113,7 +113,7 @@ import CTA from '@/components/CTA.vue';
 
             </div>
             <CTA titleOne="Parler et se faire aider"
-                description="Briser le silence est essentiel pour surmonter cette épreuve. Il existe des ressources pour accompagner les victimes"
+                description="Briser le silence est essentiel pour surmonter cette épreuve. Il existe des ressources pour accompagner les victimes."
                 btnLabel="Besoin d'aide" btnLink="/help" class="mt-10 md:mt-20" />
         </div>
     </main>
