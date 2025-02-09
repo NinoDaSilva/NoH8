@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import MyHero from '@/components/MyHero.vue';
 import StatsCard from '@/components/StatsCard.vue';
+import CTA from '@/components/CTA.vue';
 </script>
 
 <template>
@@ -125,5 +126,10 @@ import StatsCard from '@/components/StatsCard.vue';
                 <li><strong>Déposez plainte si nécessaire :</strong> certaines infractions sont punies par la loi.</li>
             </ul>
         </section>
+        <div class="px-[5%] mt-10 sm:mt-20">
+            <CTA titleOne="Comment reconnaître" titleTwo="le cyberharcèlement ?"
+                description="Souvent insidieux, il peut être difficile à identifier. Mais découvrez comment savoir si vous ou un proche en êtes victime."
+                btnLabel="En savoir plus" btnLink="/ressources/CyberHow" class="mt-10 md:mt-20" />
+        </div>
     </main>
 </template>
