@@ -3,6 +3,7 @@ import MyHero from '@/components/MyHero.vue';
 import RessourceCard from '@/components/RessourceCard.vue';
 import FaqComponent from '@/components/FaqComponent.vue';
 import EvidenceCarousel from '@/components/EvidenceCarousel.vue';
+import CTA from '@/components/CTA.vue';
 </script>
 
 <template>
@@ -45,6 +46,11 @@ import EvidenceCarousel from '@/components/EvidenceCarousel.vue';
             </div>
             <EvidenceCarousel />
         </section>
+        <div class="px-[5%] mt-10 sm:mt-20">
+            <CTA titleOne="Partagez votre expérience" titleTwo="et aidez à sensibiliser"
+                description="Votre témoignage peut faire la différence. En partageant votre histoire, vous contribuez à briser le silence et à soutenir ceux qui en ont besoin."
+                btnLabel="Témoigner maintenant" btnLink="/evidence" />
+        </div>
         <section class="px-[5%] mt-10 sm:mt-20">
             <div class="text-center items-center sm:text-start sm:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
                 <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Faq
