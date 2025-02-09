@@ -89,7 +89,7 @@ function timedMessages(duration: number) {
         let delay = 0;
         activeMessages.value.forEach((msg) => {
             setTimeout(() => removeMessage(msg.id), delay);
-            delay += 120; // Messages disparaissent progressivement
+            delay += 110; // Messages disparaissent progressivement
         });
 
         setTimeout(() => {
@@ -97,11 +97,11 @@ function timedMessages(duration: number) {
             setTimeout(() => {
                 isQuoteVisible.value = false;
                 isQuoteTwoVisible.value = true;
-            }, 3500); // Afficher le dicton
+            }, 3200); // Afficher le dicton
             setTimeout(() => {
                 isQuoteTwoVisible.value = false;
                 router.push('/home');
-            }, 8000);
+            }, 7200);
         }, delay);
     }
 
