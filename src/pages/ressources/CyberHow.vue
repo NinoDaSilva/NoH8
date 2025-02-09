@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import MyHero from '@/components/MyHero.vue';
+import CTA from '@/components/CTA.vue';
 </script>
 
 <template>
@@ -44,5 +45,11 @@ import MyHero from '@/components/MyHero.vue';
                     informations personnelles (adresse, numéro de téléphone, photos privées) sans consentement.</p>
             </div>
         </section>
+        <div class="px-[5%] mt-10 sm:mt-20">
+            <CTA titleOne="Les bonnes pratiques" titleTwo="pour se protéger"
+                description="Découvrez les bonnes pratiques pour naviguer en toute sécurité et éviter les cybermenaces"
+                btnLabel="En savoir plus" btnLink="/ressources/CyberGood" class="mt-10 md:mt-20" />
+
+        </div>
     </main>
 </template>
