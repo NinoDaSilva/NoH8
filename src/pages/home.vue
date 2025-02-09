@@ -53,6 +53,12 @@ import EvidenceCarousel from '@/components/EvidenceCarousel.vue';
                 </p>
             </div>
             <FaqComponent />
+            <div class="grid place-items-center mt-5 sm:mt-8">
+                <RouterLink to="/faq"
+                    class="text-center text-[14px] md:text-xs text-blanc rounded-md bg-noir px-3 w-4/5 sm:w-auto sm:px-8 p-2 shadow-sm">
+                    Voir plus
+                </RouterLink>
+            </div>
         </section>
     </main>
 </template>
