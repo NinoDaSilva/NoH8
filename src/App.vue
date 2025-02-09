@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import MyHeader from './components/MyHeader.vue';
 import MyFooter from './components/MyFooter.vue';
+
+const route = useRoute();
 </script>
 
 <template>
-  <MyHeader />
+  <MyHeader v-if="!['/'].includes(route.path)" />
 
   <Suspense>
     <div class="main__container">
@@ -13,7 +15,7 @@ import MyFooter from './components/MyFooter.vue';
     </div>
   </Suspense>
 
-  <MyFooter />
+  <MyFooter v-if="!['/'].includes(route.path)" />
 </template>
 
 <style>
