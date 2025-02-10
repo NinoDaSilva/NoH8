@@ -9,7 +9,7 @@ import CTA from '@/components/CTA.vue';
             description="NoHate est un site interactif conçu pour sensibiliser au cyberharcèlement et encourager des comportements bienveillants en ligne."
             class="px-[5%]" />
 
-        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
+        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1250px]">
             <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">
                 Un site pour sensibiliser et agir contre le cyberharcèlement
             </h2>
@@ -18,7 +18,7 @@ import CTA from '@/components/CTA.vue';
                 offrir des solutions pour un internet plus sûr.</p>
         </section>
 
-        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
+        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1250px]">
             <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">
                 Une expérience immersive pour comprendre l'impact des mots
             </h2>
@@ -29,7 +29,7 @@ import CTA from '@/components/CTA.vue';
                 les solutions.</p>
         </section>
 
-        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
+        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1250px]">
             <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">
                 Ce que propose NoHate
             </h2>
@@ -44,17 +44,18 @@ import CTA from '@/components/CTA.vue';
             </ul>
         </section>
 
-        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
+        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1250px]">
             <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">
-                Un projet collaboratif et engagé
+                Un projet engagé
             </h2>
-            <p>Grâce à de possible partenariats avec des influenceurs et une forte présence sur les réseaux sociaux,
-                NoHate permet de toucher un large public.</p>
-            <p>Il est aussi un outil de sensibilisation en milieu scolaire et professionnel, contribuant à une culture
+            <p>Grâce à une forte présence possible sur les réseaux sociaux, NoHate permet de toucher un large public.
+            </p>
+            <p>Il est aussi déstiné à être un outil de sensibilisation en milieu scolaire et professionnel, contribuant
+                à une culture
                 numérique plus respectueuse.</p>
         </section>
 
-        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1200px]">
+        <section class="px-[5%] mt-10 sm:mt-20 md:text-sm max-w-[1250px]">
             <h2 class="inline-block underline decoration-vert text-[18px] sm:text-lg lg:text-xl mb-1 font-semibold">
                 Devenez acteur du changement
             </h2>
