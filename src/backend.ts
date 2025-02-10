@@ -102,3 +102,11 @@ export async function temoinEvidence() {
   return records;
 }
 /* */
+
+/* Video */
+// Retourne toutes les vidéos
+export async function allVideos() {
+  const records = await pb.collection('video').getFullList();
+  return records;
+}
+/* */
