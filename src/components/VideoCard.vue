@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { VideoResponse } from '@/pocketbase-types';
+import type { VideoRecord } from '@/pocketbase-types';
 
-defineProps<VideoResponse>();
+defineProps<VideoRecord>();
 </script>
 
 <template>
