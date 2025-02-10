@@ -15,6 +15,7 @@ export enum Collections {
 	Evidence = "evidence",
 	Faq = "faq",
 	Users = "users",
+	Video = "video",
 }
 
 // Alias types for improved usability
@@ -106,13 +107,14 @@ export type EvidenceRecord = {
 	description?: string
 	id: string
 	type?: EvidenceTypeOptions
-	username?: string
 }
 
 export enum FaqCategoryOptions {
 	"top" = "top",
-	"victim" = "victim",
-	"temoin" = "temoin",
+	"all" = "all",
+	"parent" = "parent",
+	"pro" = "pro",
+	"safe" = "safe",
 }
 export type FaqRecord = {
 	category?: FaqCategoryOptions
@@ -134,6 +136,22 @@ export type UsersRecord = {
 	verified?: boolean
 }
 
+export enum VideoCategoryOptions {
+	"parent" = "parent",
+	"jeune" = "jeune",
+	"prof" = "prof",
+	"loi" = "loi",
+	"temoignage" = "temoignage",
+}
+export type VideoRecord = {
+	author?: string
+	category?: VideoCategoryOptions
+	description?: string
+	id: string
+	link?: string
+	title?: string
+}
+
 // Response types include system fields and match responses from the PocketBase API
 export type AuthoriginsResponse<Texpand = unknown> = Required<AuthoriginsRecord> & BaseSystemFields<Texpand>
 export type ExternalauthsResponse<Texpand = unknown> = Required<ExternalauthsRecord> & BaseSystemFields<Texpand>
@@ -144,6 +162,7 @@ export type ContactResponse<Texpand = unknown> = Required<ContactRecord> & BaseS
 export type EvidenceResponse<Texpand = unknown> = Required<EvidenceRecord> & BaseSystemFields<Texpand>
 export type FaqResponse<Texpand = unknown> = Required<FaqRecord> & BaseSystemFields<Texpand>
 export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>
+export type VideoResponse<Texpand = unknown> = Required<VideoRecord> & BaseSystemFields<Texpand>
 
 // Types containing all Records and Responses, useful for creating typing helper functions
 
@@ -157,6 +176,7 @@ export type CollectionRecords = {
 	evidence: EvidenceRecord
 	faq: FaqRecord
 	users: UsersRecord
+	video: VideoRecord
 }
 
 export type CollectionResponses = {
@@ -169,6 +189,7 @@ export type CollectionResponses = {
 	evidence: EvidenceResponse
 	faq: FaqResponse
 	users: UsersResponse
+	video: VideoResponse
 }
 
 // Type for usage with type asserted PocketBase instance
@@ -184,4 +205,5 @@ export type TypedPocketBase = PocketBase & {
 	collection(idOrName: 'evidence'): RecordService<EvidenceResponse>
 	collection(idOrName: 'faq'): RecordService<FaqResponse>
 	collection(idOrName: 'users'): RecordService<UsersResponse>
+	collection(idOrName: 'video'): RecordService<VideoResponse>
 }
