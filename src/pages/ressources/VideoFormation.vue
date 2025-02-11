@@ -80,7 +80,7 @@ onMounted(fetchVideos);
         </div>
 
         <!-- Bouton charger plus -->
-        <div v-if="filteredVideos.length < videos.length && filteredVideos.length > 0" class="text-center mt-8">
+        <div v-if="filteredVideos.length < videos.length && filteredVideos.length >= 10" class="text-center mt-8">
             <button @click="loadMoreVideos" class="p-3 px-5 bg-noir text-blanc rounded-md transition-all shadow-sm">
                 Voir plus de vidéos
             </button>
