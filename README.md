@@ -1,39 +1,51 @@
-# NoH8
+# [NoHate – Contre le Cyberharcèlement](https://nohate.nino-da-silva.fr)  
 
-This template should help get you started developing with Vue 3 in Vite.
+## 📝 Description  
+**NoHate** est un site interactif conçu pour sensibiliser au **cyberharcèlement** et encourager des comportements bienveillants en ligne.  
+Il propose des ressources adaptées aux **jeunes, parents, professionnels et éducateurs**, ainsi que des témoignages et des outils d’aide.  
 
-## Recommended IDE Setup
+### 🚀 Objectifs du projet :  
+- Informer sur les **dangers du cyberharcèlement** et ses conséquences  
+- Fournir des **ressources pratiques** pour mieux se protéger  
+- Permettre aux victimes et témoins de **partager leurs expériences**  
+- Offrir des **conseils pour les parents et éducateurs**  
+- Encourager un **internet plus bienveillant**  
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
+## 🎯 Fonctionnalités principales  
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+✔️ **Expérience immersive** : Une mise en situation interactive pour comprendre l’impact du cyberharcèlement  
+✔️ **Témoignages** : Recueille et partage d’histoires vécues  
+✔️ **Ressources** : Vidéos éducatives, guides et conseils adaptés à chaque public  
+✔️ **Espace d’aide** : Contacts d’associations et de professionnels pour signaler ou se faire accompagner  
+✔️ **Filtres avancés** : Recherche des contenus par catégorie (jeunes, parents, enseignants, lois, etc.)  
+✔️ **Accessibilité et responsivité** : Une interface adaptée à tous les écrans  
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## ⚙️ Technologies utilisées  
 
-## Project Setup
+- **Vue.js** (Composition API)  
+- **Vite** (Build ultra-rapide)  
+- **TailwindCSS** (UI moderne et responsive)  
+- **PocketBase** (Backend léger et base de données)  
+- **Swiper.js** (Slider interactif pour la navigation)  
 
+
+## 🚀 Installation & Déploiement  
+
+### 1️⃣ **Cloner le projet**  
+```sh
+git clone https://github.com/NinoDaSilva/NoH8.git
+cd NoH8
+```
+
+### 2️⃣ **Installer les dépendances**  
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+### 3️⃣ **Lancer le projet en local**  
 ```sh
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
