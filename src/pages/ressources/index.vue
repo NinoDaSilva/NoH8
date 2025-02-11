@@ -44,19 +44,20 @@ import CTA from '@/components/CTA.vue';
             </div>
         </section>
         <section class="px-[5%] mt-10 sm:mt-20">
-            <div class="text-center items-center sm:text-start lg:flex gap-5 mb-5 lg:mb-10 max-w-[950px]">
-                <h2 class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl font-medium">Ressources
+            <div class="text-center items-center sm:text-start lg:flex flex-wrap gap-5 mb-5 lg:mb-10 max-w-[1000px]">
+                <h2
+                    class="bg-vert inline-block px-2 rounded-md text-base sm:text-lg lg:text-xl min-w-max whitespace-nowrap font-medium">
+                    Ressources
                     vidéos
                 </h2>
                 <p class="mt-3 lg:mt-0">Témoignages, conseils et informations pratiques pour un espace numérique plus
                     sûr pour tous.
-                    Retrouver des ressources essentielles pour comprendre, prévenir et agir face au
-                    cyberharcèlement.
+                    Retrouver des ressources pour comprendre, prévenir et agir face au cyberharcèlement.
                 </p>
-                <CTA titleOne="Des vidéos à ne pas manquer"
-                    description="Des vidéos pour les jeunes, parents, professionnels et éducateurs. Retrouver des informations utiles sur la sensibilisation, les impacts et les conséquences du cyberharcèlement."
-                    btnLabel="En savoir plus" btnLink="/ressources/VideoFormation" />
             </div>
+            <CTA titleOne="Des vidéos à ne pas manquer"
+                description="Des vidéos pour les jeunes, parents, professionnels et éducateurs. Retrouver des informations utiles sur la sensibilisation, les impacts et les conséquences du cyberharcèlement."
+                btnLabel="En savoir plus" btnLink="/ressources/VideoFormation" />
         </section>
     </main>
 </template>
