@@ -53,7 +53,7 @@ onMounted(fetchVideos);
 
 <template>
     <main class="p-[5%] pt-20 sm:pt-24 max-w-[1500px] mx-auto">
-        <MyHero titleOne="Ressources :" titleTwo="Des vidéos à ne pas manquer" imgUrl=""
+        <MyHero titleOne="Ressources :" titleTwo="Des vidéos à ne pas manquer" imgUrl="/img/video-ressources-hero.png"
             description="Que vous soyez parent, éducateur ou jeune utilisateur du web, ces ressources vous aideront à adopter les bons réflexes et à mieux comprendre le harcèlement en ligne." />
 
         <!-- Sélecteur de catégorie -->
